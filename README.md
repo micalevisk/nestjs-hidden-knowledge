@@ -28,3 +28,4 @@
 
 - [You can't bundle the entire app as you can do with a FE app](https://github.com/nestjs/nest/issues/1706#issuecomment-579248915)
 - [You can't use `Test.createTestingModule()` if your app is injecting the `HttpAdapterHost` somewhere](https://github.com/nestjs/nest/issues/8076#issuecomment-926542597). Use `NestFactory.create` instead.
+- [You should avoid changing the response status/body on guards](https://github.com/nestjs/docs.nestjs.com/issues/3116#issuecomment-2424888188). For JSON responses, you can use `throw new HttpException()` instead.
